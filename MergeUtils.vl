@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="ErWs1NOFlJvO9KMYlhsFwC" LanguageVersion="2021.4.0.362" Version="0.128">
-  <NugetDependency Id="TIbWoLxGm6jOrMZolRPVhJ" Location="VL.CoreLib" Version="2021.4.0-0362-g56b3b7d169" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="ErWs1NOFlJvO9KMYlhsFwC" LanguageVersion="2025.7.0-0026-g22d1636d06" Version="0.128">
+  <NugetDependency Id="TIbWoLxGm6jOrMZolRPVhJ" Location="VL.CoreLib" Version="2025.7.0-0026-g22d1636d06" />
   <Patch Id="AmjjM5zvdLNOMqJb4g61Bo">
     <Canvas Id="BcQy1e5YEo7Nr0h0rPIsQZ" DefaultCategory="MergeUtils" CanvasType="FullCategory">
       <!--
@@ -8,38 +8,38 @@
     ************************ GetProgramFilesFolder ************************
 
 -->
-      <Node Name="GetProgramFilesFolder" Bounds="288,505,228,171" Id="EuWG7kw4uQpLUlPYimENlM">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+      <Node Name="GetProgramFilesFolder" Bounds="288,521,223,155" Id="EuWG7kw4uQpLUlPYimENlM">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="OperationDefinition" Name="Operation" />
         </p:NodeReference>
         <Patch Id="VJWKInoPP5RQX2NFesiiQm">
-          <Node Bounds="302,566,80,19" Id="SH0y0wx0YWnOphuZbkRY8A">
-            <p:NodeReference LastCategoryFullName="System.Environment" LastSymbolSource="mscorlib.dll">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="GetFolderPath" />
-            </p:NodeReference>
-            <Pin Id="MgLJhLwYgdkLHIGkp38AkX" Name="Folder" Kind="InputPin" />
-            <Pin Id="V7VC36hxbw0OMAkdSE4684" Name="Result" Kind="OutputPin" />
-          </Node>
           <ControlPoint Id="TSliUIk8216MIiYMyWYGhL" Bounds="304,659" />
           <Pin Id="H4exsh92mJBNt0ennW0Hah" Name="Result" Kind="OutputPin" Bounds="616,451" />
           <Link Id="VMzoXYouFWUNCjtaJQrGpj" Ids="TSliUIk8216MIiYMyWYGhL,H4exsh92mJBNt0ennW0Hah" IsHidden="true" />
-          <Pad Id="A6WPlwg6QIjNzgbqKdCmoC" Comment="Folder" Bounds="304,533,149,15" ShowValueBox="true" isIOBox="true" Value="ProgramFiles">
-            <p:TypeAnnotation LastCategoryFullName="System.Environment" LastSymbolSource="mscorlib.dll">
-              <Choice Kind="TypeFlag" Name="SpecialFolder" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Link Id="HLVUu1G3NjZM0YRQP6rGPt" Ids="A6WPlwg6QIjNzgbqKdCmoC,MgLJhLwYgdkLHIGkp38AkX" />
           <Node Bounds="302,608,48,19" Id="UWQYU8e054TLwZwefRYaUV">
-            <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="IO" LastDependency="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="ToPath" />
             </p:NodeReference>
             <Pin Id="RBxQpD5ZwUGPP4iLSUT2EQ" Name="Input" Kind="InputPin" />
             <Pin Id="RvIeMBQ73OFMC9t8Tzlcbb" Name="Result" Kind="OutputPin" />
           </Node>
-          <Link Id="T1RbMI6ilbVMjx3d0dB0Ve" Ids="V7VC36hxbw0OMAkdSE4684,RBxQpD5ZwUGPP4iLSUT2EQ" />
           <Link Id="NS6TDHRoEhRO41cNBIfDxM" Ids="RvIeMBQ73OFMC9t8Tzlcbb,TSliUIk8216MIiYMyWYGhL" />
+          <Node Bounds="302,573,80,19" Id="Sx2SKmSxK40L0L8SeUPU7x">
+            <p:NodeReference LastCategoryFullName="System.Environment" LastDependency="mscorlib.dll">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="GetFolderPath" />
+            </p:NodeReference>
+            <Pin Id="Bc2uurreYlVO0UrsWa0AQu" Name="Folder" Kind="InputPin" />
+            <Pin Id="HCjs4g0mBNLMS4Hqh0pg78" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="JbEE1ghcyEbQAesd8Fp1Mu" Comment="Folder" Bounds="304,549,144,15" ShowValueBox="true" isIOBox="true" Value="ProgramFiles">
+            <p:TypeAnnotation LastCategoryFullName="System.Environment" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="SpecialFolder" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Link Id="EbxDy59TYgUOMgEKtPUIpT" Ids="JbEE1ghcyEbQAesd8Fp1Mu,Bc2uurreYlVO0UrsWa0AQu" />
+          <Link Id="B1fHsBzMjjZOJfYw7B2ojs" Ids="HCjs4g0mBNLMS4Hqh0pg78,RBxQpD5ZwUGPP4iLSUT2EQ" />
         </Patch>
       </Node>
       <!--
@@ -55,7 +55,7 @@
         <p:HideCategory p:Type="Boolean">true</p:HideCategory>
         <Patch Id="JZwjnriWyyZOrYltZCyLMP">
           <Node Bounds="166,575,33,19" AutoConnect="true" Id="CQblioSdClSONtjZ7CWdYl">
-            <p:NodeReference LastCategoryFullName="System.Windows.Forms.Application" LastSymbolSource="System.Windows.Forms.dll">
+            <p:NodeReference LastCategoryFullName="System.Windows.Forms.Application" LastDependency="System.Windows.Forms.dll">
               <Choice Kind="OperationNode" Name="Exit" />
               <FullNameCategoryReference ID="System.Windows.Forms.Application" />
             </p:NodeReference>
@@ -64,28 +64,10 @@
       </Node>
       <!--
 
-    ************************ SingleAppInstanceUtils ************************
-
--->
-      <Node Name="SingleAppInstanceUtils" Bounds="851,192" Id="PRg2VV1Rmd7PphM6COCm5o">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <FullNameCategoryReference ID="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="VL.Core" LastSymbolSource="VL.Core.dll">
-          <Choice Kind="TypeFlag" Name="SingleAppInstanceUtils" />
-        </p:TypeAnnotation>
-        <Patch Id="OktL7Yg7DT2LmaPzz5SO6A">
-          <Canvas Id="Q67E1Ct2Qk1PdfDeNYijv6" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="KpcxMMygY9FN7KP4TmsIMj" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
     ************************ TopMost ************************
 
 -->
-      <Node Name="TopMost" Bounds="142,251,112,80" Id="IXDK8qNdfItN4z44XiUleT">
+      <Node Name="TopMost" Bounds="142,250,112,80" Id="IXDK8qNdfItN4z44XiUleT">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" Name="Operation" />
           <FullNameCategoryReference ID="Primitive" />
@@ -93,7 +75,7 @@
         <p:HideCategory p:Type="Boolean">false</p:HideCategory>
         <Patch Id="CENCvwzWCEKQV8uX4oa6pO">
           <Node Bounds="154,279,56,26" AutoConnect="true" Id="FeSiMwNsR8IPF3DbFsnir9">
-            <p:NodeReference LastCategoryFullName="System.Windows.Forms.Form" LastSymbolSource="System.Windows.Forms.dll">
+            <p:NodeReference LastCategoryFullName="System.Windows.Forms.Form" LastDependency="System.Windows.Forms.dll">
               <Choice Kind="OperationNode" Name="TopMost" />
               <FullNameCategoryReference ID="System.Windows.Forms.Form" />
             </p:NodeReference>
@@ -111,7 +93,7 @@
     ************************ SetTopMost ************************
 
 -->
-      <Node Name="SetTopMost" Bounds="142,401,112,80" Id="GNO2k1WzH1uMHq54MD3QsJ">
+      <Node Name="SetTopMost" Bounds="142,400,112,80" Id="GNO2k1WzH1uMHq54MD3QsJ">
         <p:NodeReference>
           <Choice Kind="OperationDefinition" Name="Operation" />
           <FullNameCategoryReference ID="Primitive" />
@@ -119,7 +101,7 @@
         <p:HideCategory p:Type="Boolean">true</p:HideCategory>
         <Patch Id="AbEEeYdbcNzOtxsx6gJX80">
           <Node Bounds="154,429,70,26" AutoConnect="true" Id="TtY8TUxO0XILJDMYoYFGvY">
-            <p:NodeReference LastCategoryFullName="System.Windows.Forms.Form" LastSymbolSource="System.Windows.Forms.dll">
+            <p:NodeReference LastCategoryFullName="System.Windows.Forms.Form" LastDependency="System.Windows.Forms.dll">
               <Choice Kind="OperationNode" Name="SetTopMost" />
               <FullNameCategoryReference ID="System.Windows.Forms.Form" />
             </p:NodeReference>
@@ -147,7 +129,7 @@
             <p:HideCategory p:Type="Boolean">false</p:HideCategory>
             <Patch Id="Mr3ZlJeGHsyNAu3a7bRyuc">
               <Node Bounds="508,179,10,10" AutoConnect="true" Id="N6DBqevxLeyL7mtQZH0JA3">
-                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XAttribute" LastSymbolSource="System.Xml.Linq.dll">
+                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XAttribute" LastDependency="System.Xml.Linq.dll">
                   <Choice Kind="OperationNode" Name="Name" />
                   <FullNameCategoryReference ID="System.Xml.Linq.XAttribute" />
                 </p:NodeReference>
@@ -173,7 +155,7 @@
             <p:HideCategory p:Type="Boolean">false</p:HideCategory>
             <Patch Id="UqTE0f1O8ePLWsgSQnU3VZ">
               <Node Bounds="452,450,53,26" AutoConnect="true" Id="PuEkFlZk6FUOOaI2c6XRtW">
-                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XAttribute" LastSymbolSource="System.Xml.Linq.dll">
+                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XAttribute" LastDependency="System.Xml.Linq.dll">
                   <Choice Kind="OperationNode" Name="Create" />
                   <FullNameCategoryReference ID="System.Xml.Linq.XAttribute" />
                 </p:NodeReference>
@@ -195,7 +177,7 @@
             <Choice Kind="ForwardDefinition" Name="Forward" />
             <FullNameCategoryReference ID="Primitive" />
           </p:NodeReference>
-          <p:TypeAnnotation LastCategoryFullName="System.Xml.Linq" LastSymbolSource="System.Xml.Linq.dll">
+          <p:TypeAnnotation LastCategoryFullName="System.Xml.Linq" LastDependency="System.Xml.Linq.dll">
             <Choice Kind="TypeFlag" Name="XName" />
           </p:TypeAnnotation>
           <Patch Id="Sq4HSd7ZoBmMREEWma9xqY">
@@ -213,7 +195,7 @@
             <Choice Kind="ForwardDefinition" Name="Forward" />
             <FullNameCategoryReference ID="Primitive" />
           </p:NodeReference>
-          <p:TypeAnnotation LastCategoryFullName="System.Xml.Linq" LastSymbolSource="System.Xml.Linq.dll">
+          <p:TypeAnnotation LastCategoryFullName="System.Xml.Linq" LastDependency="System.Xml.Linq.dll">
             <Choice Kind="TypeFlag" Name="XNamespace" />
           </p:TypeAnnotation>
           <Patch Id="Ht4UayG1kwdNr5fGiA25gV">
@@ -235,7 +217,7 @@
             <p:HideCategory p:Type="Boolean">false</p:HideCategory>
             <Patch Id="H5EBBks1oy2QUzrGD4nymo">
               <Node Bounds="440,366,16,19" AutoConnect="true" Id="B8aUL4tXZhPOxIPAcFIdQ7">
-                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XElement" LastSymbolSource="System.Xml.Linq.dll">
+                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XElement" LastDependency="System.Xml.Linq.dll">
                   <Choice Kind="OperationNode" Name="Parse" />
                   <FullNameCategoryReference ID="System.Xml.Linq.XElement" />
                 </p:NodeReference>
@@ -259,7 +241,7 @@
             <p:HideCategory p:Type="Boolean">false</p:HideCategory>
             <Patch Id="EbKZwoJ3frEOxTNTcZ7DcN">
               <Node Bounds="572,358,49,26" AutoConnect="true" Id="F2eDxPYXCfVOLN8P436Ji5">
-                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XElement" LastSymbolSource="System.Xml.Linq.dll">
+                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XElement" LastDependency="System.Xml.Linq.dll">
                   <Choice Kind="OperationNode" Name="Name" />
                   <FullNameCategoryReference ID="System.Xml.Linq.XElement" />
                 </p:NodeReference>
@@ -285,11 +267,11 @@
             <p:HideCategory p:Type="Boolean">false</p:HideCategory>
             <Patch Id="I2wpTRe6CdNNMkUUzDQP1L">
               <Node Bounds="472,501,49,26" AutoConnect="true" Id="M7UdoyBKEd5Qbd0WBUUnoZ">
-                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XElement" LastSymbolSource="System.Xml.Linq.dll">
+                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XElement" LastDependency="System.Xml.Linq.dll">
                   <Choice Kind="OperationNode" Name="Create" />
                   <FullNameCategoryReference ID="System.Xml.Linq.XElement" />
                   <PinReference Kind="InputPin" Name="Other">
-                    <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System.Xml.Linq" LastSymbolSource="System.Xml.Linq.dll">
+                    <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System.Xml.Linq" LastDependency="System.Xml.Linq.dll">
                       <Choice Kind="TypeFlag" Name="XElement" />
                     </p:DataTypeReference>
                   </PinReference>
@@ -312,7 +294,7 @@
             <Choice Kind="ForwardDefinition" Name="Forward" />
             <FullNameCategoryReference ID="Primitive" />
           </p:NodeReference>
-          <p:TypeAnnotation LastCategoryFullName="System.Xml.Linq" LastSymbolSource="System.Xml.Linq.dll">
+          <p:TypeAnnotation LastCategoryFullName="System.Xml.Linq" LastDependency="System.Xml.Linq.dll">
             <Choice Kind="TypeFlag" Name="XComment" />
           </p:TypeAnnotation>
           <Patch Id="Og1gTEe4Q4fN8M1fTGCauR">
@@ -334,7 +316,7 @@
             <p:HideCategory p:Type="Boolean">false</p:HideCategory>
             <Patch Id="P3lWUAhhiwfLbEXt82eJzS">
               <Node Bounds="256,354,10,10" AutoConnect="true" Id="PGPkzlLbb5YPTfaYLMbGhf">
-                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XNode" LastSymbolSource="System.Xml.Linq.dll">
+                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XNode" LastDependency="System.Xml.Linq.dll">
                   <Choice Kind="OperationNode" Name="PreviousNode" />
                   <FullNameCategoryReference ID="System.Xml.Linq.XNode" />
                 </p:NodeReference>
@@ -360,16 +342,16 @@
             <p:HideCategory p:Type="Boolean">false</p:HideCategory>
             <Patch Id="TGUv4QvhpylOEqiQaK2yE1">
               <Node Bounds="246,485,10,10" AutoConnect="true" Id="OHqE4eZtuhlMGVOyZyGZVR">
-                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XNode" LastSymbolSource="System.Xml.Linq.dll">
+                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XNode" LastDependency="System.Xml.Linq.dll">
                   <Choice Kind="OperationNode" Name="AddBeforeSelf" />
                   <FullNameCategoryReference ID="System.Xml.Linq.XNode" />
                   <PinReference Kind="InputPin" Name="this">
-                    <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System.Xml.Linq" LastSymbolSource="System.Xml.Linq.dll">
+                    <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System.Xml.Linq" LastDependency="System.Xml.Linq.dll">
                       <Choice Kind="TypeFlag" Name="XNode" />
                     </p:DataTypeReference>
                   </PinReference>
                   <PinReference Kind="InputPin" Name="Content">
-                    <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                    <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastDependency="mscorlib.dll">
                       <Choice Kind="TypeFlag" Name="Object" />
                     </p:DataTypeReference>
                   </PinReference>
@@ -396,7 +378,7 @@
             <p:HideCategory p:Type="Boolean">false</p:HideCategory>
             <Patch Id="K1MkCnsZF0BMvmHQk4t9nZ">
               <Node Bounds="446,387,10,10" AutoConnect="true" Id="JneF9n6U7fAM8cNgY2jEc5">
-                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XNode" LastSymbolSource="System.Xml.Linq.dll">
+                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XNode" LastDependency="System.Xml.Linq.dll">
                   <Choice Kind="OperationNode" Name="Remove" />
                   <FullNameCategoryReference ID="System.Xml.Linq.XNode" />
                 </p:NodeReference>
@@ -420,16 +402,16 @@
             <p:HideCategory p:Type="Boolean">false</p:HideCategory>
             <Patch Id="LnVtI9zernDLI0VV8i5XPI">
               <Node Bounds="446,537,10,10" AutoConnect="true" Id="OSlGMLJvBnXPsKRImLTnAp">
-                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XNode" LastSymbolSource="System.Xml.Linq.dll">
+                <p:NodeReference LastCategoryFullName="System.Xml.Linq.XNode" LastDependency="System.Xml.Linq.dll">
                   <Choice Kind="OperationNode" Name="ReplaceWith" />
                   <FullNameCategoryReference ID="System.Xml.Linq.XNode" />
                   <PinReference Kind="InputPin" Name="this">
-                    <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System.Xml.Linq" LastSymbolSource="System.Xml.Linq.dll">
+                    <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System.Xml.Linq" LastDependency="System.Xml.Linq.dll">
                       <Choice Kind="TypeFlag" Name="XNode" />
                     </p:DataTypeReference>
                   </PinReference>
                   <PinReference Kind="InputPin" Name="Content">
-                    <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+                    <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastDependency="mscorlib.dll">
                       <Choice Kind="TypeFlag" Name="Object" />
                     </p:DataTypeReference>
                   </PinReference>
@@ -457,7 +439,7 @@
           <p:HideCategory p:Type="Boolean">false</p:HideCategory>
           <Patch Id="DRPTtXA5IdPPXsj2UJIBri">
             <Node Bounds="368,566,10,10" AutoConnect="true" Id="FicDX4P842DOCUHHnkDxK9">
-              <p:NodeReference LastCategoryFullName="System.Xml.Linq.XObject" LastSymbolSource="System.Xml.Linq.dll">
+              <p:NodeReference LastCategoryFullName="System.Xml.Linq.XObject" LastDependency="System.Xml.Linq.dll">
                 <Choice Kind="OperationNode" Name="Document" />
                 <FullNameCategoryReference ID="System.Xml.Linq.XObject" />
               </p:NodeReference>
@@ -481,7 +463,7 @@
           <Choice Kind="ForwardDefinition" Name="Forward" />
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="System.Windows.Forms" LastSymbolSource="System.Windows.Forms.dll">
+        <p:TypeAnnotation LastCategoryFullName="System.Windows.Forms" LastDependency="System.Windows.Forms.dll">
           <Choice Kind="TypeFlag" Name="Clipboard" />
         </p:TypeAnnotation>
         <Patch Id="Glal9dTmTgULxdqNmcPmhg">
@@ -495,12 +477,12 @@
 
 -->
       <Node Name="TextData" Bounds="671,401,80,80" Id="K73uXvdatsSL8XkZorbzUR">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="OperationDefinition" Name="Operation" />
         </p:NodeReference>
         <Patch Id="GHY0F0f7J64OQf5eUZfV0n">
           <Node Bounds="693,433,37,19" AutoConnect="true" Id="CHGAtDEAxvFQaaQQMtYDRL">
-            <p:NodeReference LastCategoryFullName="System.Windows.Forms.DataFormats" LastSymbolSource="System.Windows.Forms.dll">
+            <p:NodeReference LastCategoryFullName="System.Windows.Forms.DataFormats" LastDependency="System.Windows.Forms.dll">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Text" />
               <CategoryReference Kind="AssemblyCategory" Name="DataFormats" NeedsToBeDirectParent="true" />
@@ -521,20 +503,20 @@
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
-          <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+          <TypeReference LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
             <Choice Kind="MutableInterfaceType" Name="IDisposable" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="UryrrSyhT5XLIduPgfLhIT">
           <Canvas Id="Q2h42FX4fA9Mi8wkOT5ffH" CanvasType="Group">
             <Node Bounds="448,358,108,19" Id="CqQivdLp8HdO25upPb346r">
-              <p:NodeReference LastCategoryFullName="Application.SingleAppInstanceUtils" LastSymbolSource="MergeUtils.vl">
+              <p:NodeReference LastCategoryFullName="Application.SingleAppInstanceUtils" LastDependency="MergeUtils.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ClassType" Name="SingleAppInstanceUtils" />
                 <Choice Kind="OperationCallFlag" Name="GetOrAddAppMutex" />
               </p:NodeReference>
               <Pin Id="R3EPdAgFF4TNcdUeyJfNSN" Name="Mutex Name" Kind="InputPin" DefaultValue="MergeVLDocs">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
               </Pin>
@@ -543,13 +525,13 @@
               <Pin Id="HsbMhVaVzQHN1tuKrtP7jQ" Name="Is New" Kind="OutputPin" />
             </Node>
             <Pad Id="PgkF1uybAISPwQ98VlUoz6" Comment="Mutex Name" Bounds="450,341,70,15" ShowValueBox="true" isIOBox="true" Value="MergeVLDocs">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
             <Pad Id="UY4xqjDHFO3QZrs34VBCGX" SlotId="RUkDoQ2mnISPbA3tmDcDjp" Bounds="448,409" />
             <Node Bounds="442,440,58,26" Id="Jq6Zf8CoHXALX4jHwYTjhp">
-              <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="Dispose" />
                 <CategoryReference Kind="MutableInterfaceType" Name="IDisposable" NeedsToBeDirectParent="true" />
@@ -559,7 +541,7 @@
             </Node>
             <ControlPoint Id="Rg2D9ksZChQMLmR61LJPvr" Bounds="561,543" />
             <Pad Id="JjHeDV76HhzLFveLSsatTF" Bounds="607,258,256,111" ShowValueBox="true" isIOBox="true" Value="this is just in order to find out if another instance of the tool is running (as patch or exe)&#xD;&#xA;&#xD;&#xA;if not we start up with Local Execution">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
               <p:ValueBoxSettings>
@@ -567,8 +549,8 @@
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
-            <Node Bounds="573,431" Id="PVZWKcrdogfOldhVh990Jg">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+            <Node Bounds="573,431,30,19" Id="PVZWKcrdogfOldhVh990Jg">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="OR" />
               </p:NodeReference>
@@ -576,8 +558,8 @@
               <Pin Id="OX12W38ZihtOll5GtfO7OK" Name="Input 2" Kind="InputPin" />
               <Pin Id="G4Px8sY5JaePBL61k1NiUj" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Node Bounds="629,415" Id="FD92tsJ56T8OLaSwLbOZUW">
-              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+            <Node Bounds="629,415,37,19" Id="FD92tsJ56T8OLaSwLbOZUW">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="NOT" />
               </p:NodeReference>
@@ -585,14 +567,14 @@
               <Pin Id="N1bd0ssQ5yDM3AvMBCeaTc" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="631,391,16,19" Id="U4Ci1GwWSyXMxi1AkVCDDv">
-              <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="System.Application" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsExported" />
               </p:NodeReference>
               <Pin Id="FOnTdKm6GlrLeq0WfCiCwW" Name="Is Exported" Kind="OutputPin" />
             </Node>
             <Pad Id="P2XmUiPaEiWLC854xJwyWJ" Bounds="637,499,35,35" ShowValueBox="true" isIOBox="true" Value="True">
-              <p:TypeAnnotation>
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:TypeAnnotation>
@@ -622,18 +604,18 @@
 
 -->
       <Node Name="AbortIfOtherInstanceIsRunning" Bounds="1136,423,294,320" Id="TbLd9hsYnEOQZJ6Zm0uF7b">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="OperationDefinition" Name="Operation" />
         </p:NodeReference>
         <Patch Id="E3joL3Eual7N4UmCNC4q1O">
           <Node Bounds="1191,468,108,19" Id="Th5tiWMCzGUNNhoSCXlApI">
-            <p:NodeReference LastCategoryFullName="Application.SingleAppInstanceUtils" LastSymbolSource="MergeUtils.vl">
+            <p:NodeReference LastCategoryFullName="Application.SingleAppInstanceUtils" LastDependency="MergeUtils.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="ClassType" Name="SingleAppInstanceUtils" />
               <Choice Kind="OperationCallFlag" Name="GetOrAddAppMutex" />
             </p:NodeReference>
             <Pin Id="AnyiQTTVLD7LTBO0QqP7c8" Name="Mutex Name" Kind="InputPin" DefaultValue="MergeVLDocs">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
@@ -642,7 +624,7 @@
             <Pin Id="B3j2PTcXNfnOK3D3pXjtnZ" Name="Is New" Kind="OutputPin" />
           </Node>
           <Pad Id="Tokpw2LcmAmP9Mfof6Zr5o" Comment="Mutex Name" Bounds="1193,451,70,15" ShowValueBox="true" isIOBox="true" Value="MergeVLDocs">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
@@ -650,7 +632,7 @@
           <ControlPoint Id="TkNN0ehCLmhLjWnt6ny7iw" Bounds="1314,506" />
           <Link Id="J2ASk1YvmeHQblj11DpG8n" Ids="TkNN0ehCLmhLjWnt6ny7iw,UFR1Mnclpm7QX4ilPQq5sQ" IsHidden="true" />
           <Node Bounds="1159,512,37,19" Id="VHETtPks3XWLRhDBlI5yXh">
-            <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="NOT" />
             </p:NodeReference>
@@ -660,20 +642,20 @@
           <Pad Id="TLGr42hYbLiMJjdDQJPnGU" Comment="our turn" Bounds="1161,503,40,15" ShowValueBox="true" isIOBox="true" />
           <Link Id="JibeFkB7GqKMIBFo2DOfSm" Ids="B3j2PTcXNfnOK3D3pXjtnZ,TLGr42hYbLiMJjdDQJPnGU" />
           <Link Id="AeUCqDIhZuuMksbjpbwgjz" Ids="TLGr42hYbLiMJjdDQJPnGU,Q4KTWCQM89zP84bjFgu5Cj" />
-          <Node Bounds="1159,541,188,138" Id="IP0MeEYnpilPrJ3EszYxfT">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+          <Node Bounds="1159,541,188,139" Id="IP0MeEYnpilPrJ3EszYxfT">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="If" />
               <CategoryReference Kind="Category" Name="Primitive" />
             </p:NodeReference>
             <Pin Id="UMxlf4Opx8cLdcaqr7dbJE" Name="Condition" Kind="InputPin" />
-            <ControlPoint Id="C6XVwrtrw5lPLDeMxXAqhY" Bounds="1173,548" Alignment="Top" />
+            <ControlPoint Id="C6XVwrtrw5lPLDeMxXAqhY" Bounds="1173,547" Alignment="Top" />
             <ControlPoint Id="KydpwaSe4YsMyPtoWFjjEI" Bounds="1173,674" Alignment="Bottom" />
             <Patch Id="Oby6YmVvsauP3MfY8wpnSI" ManuallySortedPins="true">
               <Patch Id="TzQoqfBCIOdPGK95znW8qc" Name="Create" ManuallySortedPins="true" />
               <Patch Id="B1diXA5ZU3YQQ43raywh4l" Name="Then" ManuallySortedPins="true" />
               <Node Bounds="1194,588,141,19" Id="O3spcBlWJEkP7wkNFjgcYT">
-                <p:NodeReference LastCategoryFullName="Application.SingleAppInstanceUtils" LastSymbolSource="MergeUtils.vl">
+                <p:NodeReference LastCategoryFullName="Application.SingleAppInstanceUtils" LastDependency="MergeUtils.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="ClassType" Name="SingleAppInstanceUtils" />
                   <Choice Kind="OperationCallFlag" Name="GetAlreadyRunningInstance" />
@@ -681,7 +663,7 @@
                 <Pin Id="EOwW9Jq4UlDPgu8zDuCzyC" Name="Result" Kind="OutputPin" />
               </Node>
               <Node Bounds="1223,620,98,19" Id="DfLdlzdvtYTPQysNG1gPSN">
-                <p:NodeReference LastCategoryFullName="MergeUtils.SingleAppInstanceUtils" LastSymbolSource="MergeUtils.vl">
+                <p:NodeReference LastCategoryFullName="MergeUtils.SingleAppInstanceUtils" LastDependency="MergeUtils.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="SendDataMessage" />
                 </p:NodeReference>
@@ -701,7 +683,7 @@
           <Link Id="RLNy93DXsX1PZFPPVjniyM" Ids="KydpwaSe4YsMyPtoWFjjEI,RWihucaDcDOOXnpM7V3GSx" />
           <Link Id="FetBnkhXqSvM5diPmjk0wz" Ids="EOwW9Jq4UlDPgu8zDuCzyC,TLHyThtBOCqMpZ08slFXsT" />
           <Node Bounds="1175,697,57,19" Id="E3QRR44kJESLnDtxe5fFbq">
-            <p:NodeReference LastCategoryFullName="MergeUtils" LastSymbolSource="MergeUtils.vl">
+            <p:NodeReference LastCategoryFullName="MergeUtils" LastDependency="MergeUtils.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Exit" />
             </p:NodeReference>
@@ -712,7 +694,7 @@
         </Patch>
       </Node>
       <Node Bounds="1150,240,295,120" Id="TGLrZEqj2LDLjmwSqJU9Ju">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
           <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
           <Choice Kind="ApplicationStatefulRegion" Name="If" />
           <FullNameCategoryReference ID="Primitive" />
@@ -722,7 +704,7 @@
           <Patch Id="SBlZi5jLhtnQXpmeoRX9hC" Name="Create" ParticipatingElements="MfxA7CisxuaOMQkuaEfsBC" ManuallySortedPins="true" />
           <Patch Id="IZulOWEDJ87PsfwMSqFmtO" Name="Then" ManuallySortedPins="true" />
           <Node Bounds="1178,285,156,19" Id="MfxA7CisxuaOMQkuaEfsBC">
-            <p:NodeReference LastCategoryFullName="MergeUtils" LastSymbolSource="MergeUtils.vl">
+            <p:NodeReference LastCategoryFullName="MergeUtils" LastDependency="MergeUtils.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="AbortIfOtherInstanceIsRunning" />
             </p:NodeReference>
@@ -730,7 +712,7 @@
             <Pin Id="BVmxa5vYLASPypa88N1nCI" Name="Its our turn" Kind="OutputPin" />
           </Node>
           <Pad Id="E0mdDvDJVfvPFgZjAqMFHt" Bounds="1166,321,208,27" ShowValueBox="true" isIOBox="true" Value="shuts down the app and instructs the other running instance of the MergeVLDocs to take over">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -739,7 +721,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="1388,263,45,19" Id="FXkOep9SQ7dOrKmAjLwSPT">
-            <p:NodeReference LastCategoryFullName="System" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="System" LastDependency="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Args" />
             </p:NodeReference>
@@ -749,13 +731,13 @@
             <Pin Id="KXejdPnSKmkNfBXgIcxUNz" Name="Dictionary" Kind="OutputPin" />
           </Node>
           <Node Bounds="1387,291,34,19" Id="JsRO5fU4xCgOY5q3rp1UrG">
-            <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Join" />
               <CategoryReference Kind="StringType" Name="String" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="LJ0XkO6WkthOOi5iJjE2SQ" Name="Separator" Kind="InputPin" DefaultValue=" ">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
@@ -779,22 +761,23 @@
 
 -->
       <Node Name="ToObservable (Region)" Bounds="773,670" Id="C3kkFRyPyoPPWT2TVjmHhG">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="F1ZqgxCw2QJMJLlkl2GEzS" IsGeneric="true">
           <Canvas Id="TREFXLuiKrJNXaRSV5CKii" CanvasType="Group">
             <Node Bounds="366,248,46,26" Id="Fn6ruZSDhL3NV722OtnIxd">
-              <p:NodeReference LastCategoryFullName="Reactive.Subjects.Subject" LastSymbolSource="VL.Reactive.vl">
+              <p:NodeReference LastCategoryFullName="Reactive.Subjects.Subject" LastDependency="VL.Reactive.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="Create" />
                 <CategoryReference Kind="ClassType" Name="Subject" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="O01Ks7KDGYzPuLLi3lAgGP" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="UVqIr77KbAdMPZtoyq033y" Name="Node Context" Kind="InputPin" IsHidden="true" />
             </Node>
             <Pad Id="BthOiJfZKKpOHttP0YHhWu" SlotId="EGAq0gRVnZ2PE9KLqeI4se" Bounds="372,306" />
             <Node Bounds="486,328,112,119" Id="OEoWjUh1ysvOfkZEN37AF9">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 <FullNameCategoryReference ID="Primitive" />
@@ -804,7 +787,7 @@
                 <Patch Id="L8w8haOCjtHP5aOHWEM3Cf" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="LsXKUCkSQ8UNFntvbdfcM8" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="507,351,79,26" Id="NoG6i3yBKWYLHZ9RXFfJLM">
-                  <p:NodeReference LastCategoryFullName="Primitive.Delegates.Delegate (0 -&gt; 1)" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.Delegates.Delegate (0 -&gt; 1)" LastDependency="CoreLibBasics.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="FuncType" Name="Delegate (0 -&gt; 1)" />
                     <Choice Kind="OperationCallFlag" Name="Invoke" />
@@ -813,7 +796,7 @@
                   <Pin Id="R2o1Z9RflKRPAKcY7789lM" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="498,401,51,26" Id="KYcXN3V6vVPLVOzj4TBu1v">
-                  <p:NodeReference LastCategoryFullName="Reactive.Subjects.Subject" LastSymbolSource="VL.Reactive.vl">
+                  <p:NodeReference LastCategoryFullName="Reactive.Subjects.Subject" LastDependency="VL.Reactive.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="OnNext" />
                     <CategoryReference Kind="ClassType" Name="Subject" NeedsToBeDirectParent="true" />
@@ -828,7 +811,7 @@
             <ControlPoint Id="PKgICHm7PgjQJiDwp7Y5Iw" Bounds="404,389" />
             <ControlPoint Id="IadqaxcBZLgP9Znqed7UyX" Bounds="550,284" />
             <Node Bounds="270,430" Id="Rj75WhtUIQ9NNG7mYWvY6U">
-              <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="Dispose" />
                 <CategoryReference Kind="MutableInterfaceType" Name="IDisposable" NeedsToBeDirectParent="true" />
@@ -843,7 +826,7 @@
             <Pin Id="ST3dJU3r1hcOQmQOs3R4BQ" Name="Push" Kind="InputPin" Bounds="507,276" />
             <Pin Id="KTCHiUDcmxEPYGN9nyAkRV" Name="Update" Kind="InputPin" />
             <Pin Id="RHhDamrPvx9PbOLmpH5T3C" Name="Output" Kind="OutputPin" Bounds="394,503">
-              <p:TypeAnnotation>
+              <p:TypeAnnotation LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="Observable" />
               </p:TypeAnnotation>
             </Pin>
@@ -871,19 +854,20 @@
     ************************ FormClosing ************************
 
 -->
-      <Node Name="FormClosing" Bounds="344,761,98,80" Id="E5T9N9T7MjgOY5s7yWfaCV">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+      <Node Name="FormClosing" Bounds="344,760,98,80" Id="E5T9N9T7MjgOY5s7yWfaCV">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="OperationDefinition" Name="Operation" />
         </p:NodeReference>
         <p:HideCategory p:Type="Boolean">true</p:HideCategory>
         <Patch Id="R9TieEcStWJNxwvxOfD1mb">
           <Node Bounds="356,789,74,26" AutoConnect="true" Id="ROxyXCNrS97MJoZXrWSiHa">
-            <p:NodeReference LastCategoryFullName="System.Windows.Forms.Form" LastSymbolSource="System.Windows.Forms.dll">
+            <p:NodeReference LastCategoryFullName="System.Windows.Forms.Form" LastDependency="System.Windows.Forms.dll">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="AssemblyCategory" Name="Form" />
               <Choice Kind="OperationCallFlag" Name="FormClosing" />
             </p:NodeReference>
             <Pin Id="U1mJcscn71DNmRDYmtWSYn" Name="Input" Kind="StateInputPin" />
+            <Pin Id="TGq5SAZJlipLFsztiPLB3Q" Name="State Output" Kind="OutputPin" IsHidden="true" />
             <Pin Id="TvvpiwkEbf8LTkXnQ91IRF" Name="Result" Kind="OutputPin" />
           </Node>
           <Pin Id="JNhOLouXr0bM4bwxwA6vKv" Name="Input" Kind="InputPin" />
@@ -900,7 +884,7 @@
           <Choice Kind="ForwardDefinition" Name="Forward" />
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="System" LastSymbolSource="mscorlib.dll">
+        <p:TypeAnnotation LastCategoryFullName="System" LastDependency="mscorlib.dll">
           <Choice Kind="TypeFlag" Name="Version" />
         </p:TypeAnnotation>
         <Patch Id="E0PCwuCjea6LGXZ6aq6cE9">
@@ -930,9 +914,10 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="NkEvyMrawyTPHnYfNXcWF4" Location="VL.Skia" Version="2021.4.0-0362-g56b3b7d169" />
+  <NugetDependency Id="NkEvyMrawyTPHnYfNXcWF4" Location="VL.Skia" Version="2025.7.0-0026-g22d1636d06" />
   <PlatformDependency Id="IgvsUZKCGsdOqGzZwpzmQG" Location="mscorlib" />
   <PlatformDependency Id="QDR9KUE0GtwN1kTlkPpL9c" Location="System.Windows.Forms" />
   <PlatformDependency Id="JrjecpJBoeDMcM77y3BZkO" Location="../vvvv_Stride/public-vl/VL.CoreLib/src/bin/Release/net472/VL.Core.dll" />
   <PlatformDependency Id="BM3SXD06LaFPke89W7q1dH" Location="System.Xml.Linq" />
+  <ProjectDependency Id="BGp1suVGlHfNrQRty9esA7" Location="./csharp/MergeVLDocsUtils/MergeVLDocsUtils.csproj" />
 </Document>

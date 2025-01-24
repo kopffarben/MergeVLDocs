@@ -1,1 +1,23 @@
-*.dll
+*.vl/
+*.vs/
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+Thumbs.db
+*.zip
+
+# Dynamic plugins .dll
+bin/
+obj/
+*.csproj.user
+*.tvsconfig
+*.suo
+UpgradeLog.XML
+Backup/
+_UpgradeReport_Files/
+*.log
+*.zip
